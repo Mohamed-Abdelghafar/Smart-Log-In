@@ -42,6 +42,9 @@ icon.addEventListener('click', function (e) {
     var iconSrc = e.target.getAttribute('src')
     if (iconSrc !== null) {
         imageChanger.src = iconSrc
+        for (let i = 0; i < iconUser.length; i++) {
+            icon.classList.add('d-none')
+        }
     }
 })
 

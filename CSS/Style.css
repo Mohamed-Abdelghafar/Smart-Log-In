@@ -221,3 +221,8 @@ form {
 .fa-circle-check {
   color:rgb(15, 175, 15) ;
 }
+
+.iconSelect {
+    background-color: rgb(15, 175, 15);
+    width: 30%;
+}
