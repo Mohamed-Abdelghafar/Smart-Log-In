@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANIELS</title>
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/welcome.css">
+</head>
+
+<body >
+
+  <video autoplay muted loop id="myVideo">
+    <source src="Videos/video (2160p).mp4" type="video/mp4">
+  </video>
+
+  <section class="mx-auto vh-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="contain h-50 w-100 rounded-5 d-flex flex-column justify-content-center align-items-center">
+   <div class="image rounded-circle">
+     <img src="Images/robot-8458438_1280.png" alt="" class=" userImageChanger w-100 h-100">
+   </div>
+   <h1 class="auto-text text-center mt-3"></h1>
+   <button class="logOut p-2 mx-auto rounded-5 w-50 mt-3">Log Out</button>
+  </div>
+ </section>
+
+
+<script src="Js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="Js/welcome.js"></script>
+  <script>
+    var typed = new Typed('.auto-text', {
+        strings: [`Welcome ${userName}`],
+        typeSpeed: 120,
+      });
+  </script>
+</body>
