@@ -135,8 +135,6 @@ function add() {
     else if (looper() == true) {
         document.querySelector('.alert-buttonSignUpF').classList.remove('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
-        passInputSignUp.classList.add('is-invalid')
-        passInputSignUp.classList.remove('is-valid')
         emailInputSignUp.classList.add('is-invalid')
         emailInputSignUp.classList.remove('is-valid')
 
