@@ -1,12 +1,9 @@
-
-#myVideo {
-    position: fixed;
-    left: 0;
-    top: 0;
-    min-height: 100%;
-    min-width: 100%;
-    z-index: -1;
+body {
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/abstract-1231877.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
+
 .typed-cursor {
     display: none;
 }
@@ -15,8 +12,7 @@ section {
     margin: auto;
 }
 .contain {
-    background-color: rgba(11, 171, 211, 0.452);
-    filter: drop-shadow(0 0 10px );
+    background-color: rgba(255, 255, 255, 0.349);
 }
 .image {
     width: 150px;
@@ -28,7 +24,7 @@ section {
 h1 {
     width: fit-content;
     font-size: 70px;
-    color: white;
+    color: black;
     text-shadow: (0 0 10px white);
 }
 
@@ -42,8 +38,8 @@ h1 {
     transition: 0.5s;
 }
 .logOut:hover {
-    background-color: rgb(8, 86, 105);
-    color: black;
+    background-color: rgb(10, 116, 143);
+    color: white;
     border: 0;
     font-size: 30px;
     font-weight: 700;
