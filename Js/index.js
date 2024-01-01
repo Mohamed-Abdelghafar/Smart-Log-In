@@ -75,9 +75,6 @@ function add() {
                 if (container[i].userEmail.includes(emailInputSignUp.value) == true) {
                     return true
                 }
-                else {
-                    return false
-                }
             }
         }
     }
@@ -99,7 +96,7 @@ function add() {
         popUp.classList.remove('d-none')
         clickSignIn.classList.add('lightSignIn')
     }
-    else if (looper() == false && regexEmail() == true && regexPassword() == true) {
+    else if (looper() !== true && regexEmail() == true && regexPassword() == true) {
         var data = {
             userImage: imageChanger.src,
             userName: nameInputSignUp.value,
