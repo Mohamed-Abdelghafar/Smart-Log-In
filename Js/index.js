@@ -89,14 +89,12 @@ function add() {
         document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         container.push(data)
         localStorage.setItem('userData', JSON.stringify(container))
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         clear()
         popLayer.classList.remove('d-none')
         popUp.classList.remove('d-none')
         clickSignIn.classList.add('lightSignIn')
     }
-    else if (looper() !== true && regexEmail() == true && regexPassword() == true) {
+    else if (looper() !== true && regexEmail() == true && regexPassword() == true  && regexName() == true) {
         var data = {
             userImage: imageChanger.src,
             userName: nameInputSignUp.value,
@@ -108,8 +106,6 @@ function add() {
         document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         container.push(data)
         localStorage.setItem('userData', JSON.stringify(container))
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         clear()
         popLayer.classList.remove('d-none')
         popUp.classList.remove('d-none')
@@ -122,16 +118,8 @@ function add() {
     }
     else if (emailInputSignUp.value == "" && passInputSignUp.value == "") {
         document.querySelector('.alert-buttonSignUpS').classList.remove('d-none')
-        alertPassword.classList.remove('d-none')
-        alertEmail.classList.remove('d-none')
+        
     }
-    else if (regexEmail() == false) {
-        alertEmail.classList.remove('d-none')
-    }
-    else if (regexPassword() == false) {
-        alertPassword.classList.remove('d-none')
-    }
-
     else if (looper() == true) {
         document.querySelector('.alert-buttonSignUpF').classList.remove('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
