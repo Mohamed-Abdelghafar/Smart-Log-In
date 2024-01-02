@@ -8,11 +8,14 @@
     width: 10px;
     background-color: rgba(0, 0, 0, 0.479);    
     border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
 
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: rgba(81, 6, 104, 0.479);
+    background-color: rgba(127, 9, 163, 0.336);
     border-radius: 10px;
 }
 
