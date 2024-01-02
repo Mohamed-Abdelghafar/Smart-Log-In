@@ -36,7 +36,7 @@ let icon = document.querySelector('.icons-container')
 let marker = document.querySelector('.marker')
 
 buttonDownload.addEventListener('click', function () {
-    icon.classList.remove('d-none')
+    icon.classList.toggle('d-none')
 })
 icon.addEventListener('click', function (e) {
     var iconSrc = e.target.getAttribute('src')
