@@ -1,9 +1,4 @@
-:root {
-    --main-color: #F4F4F4;
-    --p-color: #748182;
-    --h-color: #343434;
-    --hover-background: #1C1C1C;
-}
+
 ::-webkit-scrollbar {
     width: 10px;
     background-color: rgba(0, 0, 0, 0.479);    
@@ -13,7 +8,6 @@
     top: 0;
 
 }
-
 ::-webkit-scrollbar-thumb{
     background-color: rgba(127, 9, 163, 0.336);
     border-radius: 10px;
@@ -71,7 +65,7 @@ input::placeholder {
 }
 
 .image-download {
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -199,6 +193,16 @@ form {
     height: var(--h);
     border-radius: 50%;
     cursor: pointer;
+    transition: 0.5s;
+}
+.iconUser:hover {
+    filter: drop-shadow(0 0 5px white);
+}
+.iconUser img{
+    transition: 0.5s;
+}
+.iconUser img:hover {
+    scale: 1.2;
 }
 .poplayer {
     background-color: rgba(0, 0, 0, 0.329);
