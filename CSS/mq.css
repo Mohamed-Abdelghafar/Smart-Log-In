@@ -18,7 +18,9 @@
     ::placeholder {
         font-size: 12px;
     }
-    .popup {width: 70%;}
+    .popup,.popup-error1,.popup-error2 {
+        width: 70%;
+    }
 }
 @media screen and ( max-width:575px ){
     .image-download {
@@ -26,6 +28,8 @@
         width: 110px;
         height: 110px;
     }
-    .popup {width: 100%;}
+    .popup,.popup-error1,.popup-error2 {
+        width: 100%;
+    }
 }
 
