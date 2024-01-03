@@ -207,7 +207,7 @@ form {
 .poplayer {
     background-color: rgba(0, 0, 0, 0.329);
 }
-.popup {
+.popup , .popup-error1 , .popup-error2 {
     height: 60%;
     width: 50%;
     background-color: white;
@@ -224,6 +224,7 @@ form {
     background-color: rgb(15, 175, 15);
     font-weight: bold;
     color: #343434;
+    cursor: pointer!important;
 }
 .fa-circle-check {
   color:rgb(15, 175, 15) ;
@@ -232,4 +233,14 @@ form {
 .iconSelect {
     background-color: rgb(15, 175, 15);
     width: 30%;
+}
+.fa-circle-xmark {
+    color: rgb(207, 43, 43);
+}
+.error-Button , .error-Button2 {
+    width: 50%;
+    background-color: rgb(207, 43, 43);
+    font-weight: bold;
+    color: white;
+    cursor: pointer!important;
 }

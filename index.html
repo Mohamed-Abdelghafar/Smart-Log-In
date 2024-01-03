@@ -36,6 +36,14 @@
             <p class="my-5">Your details has been successfully submited . </p>
             <button class="success-Button border-0 py-3 rounded-3" type="button">OK</button>
           </div>
+          <div
+            class="text-center align-middle popup-error1 rounded-5 d-flex flex-column justify-content-center align-items-center p-3 d-none">
+            <div class="mb-5"><i class="fa-solid fa-circle-xmark fa-5x"></i></div>
+            <h3>Sorry</h3>
+            <p class="my-5">This Email is already exist / Try another Email . </p>
+            <button class="error-Button border-0 py-3 rounded-3" type="button">OK</button>
+          </div>
+          
 
           <!--  -->
           <div class="d-flex flex-column justify-content-center align-items-center">
@@ -83,10 +91,6 @@
               Sign Up is success
             </div>
             <span>You have an account ? <span id="hasAccount">Sign In</span></span>
-            <div class="alert alert-buttonSignUpF d-none  alert-danger p-2 mt-1" role="alert"> This Email is already
-              exist
-              /
-              Try another Email </div>
             <div class="alert alert-buttonSignUpS d-none  alert-danger p-2 mt-1" role="alert"> All Inputs Are Required
             </div>
           </div>
@@ -97,6 +101,14 @@
 
       <section id="back" class=" rounded-5 text-white d-flex flex-column align-items-center justify-content-center ">
         <form class="mb-4 form2">
+          <div class=" poplayer2 position-fixed top-0 bottom-0 start-0 end-0 rounded-5 d-none"></div>
+          <div
+            class="text-center align-middle popup-error2 rounded-5 d-flex flex-column justify-content-center align-items-center p-3 d-none">
+            <div class="mb-5"><i class="fa-solid fa-circle-xmark fa-5x"></i></div>
+            <h3>Sorry</h3>
+            <p class="my-5">Not found this Email , Email Or Password is Wrong / if it is your first time Please sign up . </p>
+            <button class="error-Button2 border-0 py-3 rounded-3" type="button">OK</button>
+          </div>
           <label for="userEmailSignIn" class="mt-4 mb-2"> Email </label>
           <input class="form-control  bg-transparent border-1 text-white" type="email" name="" id="userEmailSignIn"
             placeholder="Enter Your Email">

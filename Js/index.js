@@ -19,6 +19,7 @@ var alertEmail = document.querySelector('.alert-email')
 var alertPassword = document.querySelector('.alert-pass')
 var alertName = document.querySelector('.alert-name')
 
+
 var signUpButton = document.querySelector('.signUp-button')
 
 var container = []
@@ -86,7 +87,6 @@ function add() {
             userEmail: emailInputSignUp.value,
             userPassword: passInputSignUp.value
         }
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         container.push(data)
         localStorage.setItem('userData', JSON.stringify(container))
         clear()
@@ -103,7 +103,6 @@ function add() {
         }
         alertEmail.classList.add('d-none')
         alertPassword.classList.add('d-none')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         container.push(data)
         localStorage.setItem('userData', JSON.stringify(container))
         clear()
@@ -121,11 +120,11 @@ function add() {
         
     }
     else if (looper() == true) {
-        document.querySelector('.alert-buttonSignUpF').classList.remove('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
         emailInputSignUp.classList.add('is-invalid')
         emailInputSignUp.classList.remove('is-valid')
-
+        popLayer.classList.remove('d-none')
+        popUpError.classList.remove('d-none')
     }
 
 
@@ -147,29 +146,30 @@ signInButton.addEventListener('click', function () {
     }
     if (emailInputSignIn.value == "" || passInputSignIn.value == "") {
         document.querySelector('.alert-buttonSignInS').classList.remove('d-none')
-        document.querySelector('.alert-buttonSignInF').classList.add('d-none')
     }
     else if (loopers() == true) {
         window.location = 'welcome.html'
         document.querySelector('.alert-buttonSignInS').classList.add('d-none')
-        document.querySelector('.alert-buttonSignInF').classList.add('d-none')
         clearSignIn()
     }
     else if (loopers() !== true) {
-        document.querySelector('.alert-buttonSignInF').classList.remove('d-none')
+        popLayer2.classList.remove('d-none')
+        popUpError2.classList.remove('d-none')
         document.querySelector('.alert-buttonSignInS').classList.add('d-none')
 
     }
     else if (localStorage.getItem('userData') == null) {
-        document.querySelector('.alert-buttonSignInF').classList.remove('d-none')
+        popLayer2.classList.remove('d-none')
+        popUpError2.classList.remove('d-none')
     }
+    
 })
 
 //-------------------------------------------------------------------------Regex-----------------------------------------------
 
-nameInputSignUp.addEventListener('change', regexName)
-emailInputSignUp.addEventListener('change', regexEmail)
-passInputSignUp.addEventListener('change', regexPassword)
+nameInputSignUp.addEventListener('keyup', regexName)
+emailInputSignUp.addEventListener('keyup', regexEmail)
+passInputSignUp.addEventListener('keyup', regexPassword)
 
 function regexName() {
     var regexUserName = /^[A-z]{3,20}$/
@@ -199,7 +199,6 @@ function regexEmail() {
 
         emailInputSignUp.classList.add('is-valid')
         emailInputSignUp.classList.remove('is-invalid')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
         alertEmail.classList.add('d-none')
 
@@ -209,7 +208,6 @@ function regexEmail() {
     else {
         emailInputSignUp.classList.add('is-invalid')
         emailInputSignUp.classList.remove('is-valid')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
         alertEmail.classList.remove('d-none')
         return false
@@ -220,7 +218,6 @@ function regexPassword() {
     if (regexUserPassword.test(passInputSignUp.value) == true) {
         passInputSignUp.classList.add('is-valid')
         passInputSignUp.classList.remove('is-invalid')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
         alertPassword.classList.add('d-none')
 
@@ -230,7 +227,6 @@ function regexPassword() {
     else {
         passInputSignUp.classList.add('is-invalid')
         passInputSignUp.classList.remove('is-valid')
-        document.querySelector('.alert-buttonSignUpF').classList.add('d-none')
         document.querySelector('.alert-buttonSignUpS').classList.add('d-none')
         alertPassword.classList.remove('d-none')
 
@@ -266,7 +262,6 @@ function clearSignIn() {
     emailInputSignIn.value = ""
     passInputSignIn.value = ""
     document.querySelector('.alert-buttonSignInS').classList.add('d-none')
-    document.querySelector('.alert-buttonSignInF').classList.add('d-none')
 
 
 }
@@ -291,11 +286,24 @@ clickSignUp.addEventListener('click', function () {
 })
 
 var popLayer = document.querySelector('.poplayer')
+var popLayer2 = document.querySelector('.poplayer2')
 var popUp = document.querySelector('.popup')
+var popUpError = document.querySelector('.popup-error1')
+var popUpError2 = document.querySelector('.popup-error2')
 var popButton = document.querySelector('.success-Button')
+var popButtonError = document.querySelector('.error-Button')
+var popButtonError2 = document.querySelector('.error-Button2')
 popButton.addEventListener('click', function () {
     popLayer.classList.add('d-none')
     popUp.classList.add('d-none')
+})
+popButtonError.addEventListener('click', function () {
+    popLayer.classList.add('d-none')
+    popUpError.classList.add('d-none')
+})
+popButtonError2.addEventListener('click', function () {
+    popLayer2.classList.add('d-none')
+    popUpError2.classList.add('d-none')
 })
 
 
